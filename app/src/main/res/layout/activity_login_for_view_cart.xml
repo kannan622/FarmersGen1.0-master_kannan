@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/unknown"
+    tools:context=".signin.LoginActivityForViewCart">
+
+
+    <ImageView
+        android:layout_width="@dimen/hundred_dp"
+        android:layout_height="@dimen/hundred_dp"
+        android:layout_gravity="center"
+        android:contentDescription="@null"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/fifty_dp"
+        android:layout_marginBottom="@dimen/ten_dp"
+        android:src="@drawable/organic"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twenty_dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/ten_dp">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/loginMobileNoAtViewCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:paddingTop="@dimen/ten_dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextLMAtViewCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/mobile_number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingTop="@dimen/ten_dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/large_font" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/loginPasswordAtViewCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten_dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorAccent">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextLPAtViewCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingEnd="@dimen/fifteen_dp"
+                android:paddingStart="@dimen/three_dp"
+                android:paddingTop="@dimen/ten_dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/alpha_gray"
+                android:textSize="@dimen/large_font" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/loginForgetPasswordAtViewCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/five_dp"
+            android:text="@string/forgot_password"
+            android:onClick="onClickLoginForgetPasswordAtViewCart"
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/medium_font"
+            android:visibility="visible"
+            />
+
+        <Button
+            android:id="@+id/btnLoginAtViewCart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:text="@string/login"
+            android:onClick="OnlickLoginAtViewCart"
+            android:background="@drawable/rec_gradiant"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_font" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twenty_dp"
+            >
+            <TextView
+                android:id="@+id/createAcc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/havent"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/createAcc"
+                android:text="@string/signup"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/green"
+                android:onClick="onClickSignupInLoginAtViewCartActivity"
+                android:layout_alignBaseline="@id/createAcc"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

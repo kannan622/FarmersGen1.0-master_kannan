@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/five_dp"
+    tools:context=".signup.OTPActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/otpText_LoginActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_dp"
+                android:layout_marginTop="@dimen/thirty_dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="OTP has been sent to "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textSize="@dimen/twenty_dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/otp_MobileNumber_LoginActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_marginTop="@dimen/thirty_dp"
+                android:layout_toRightOf="@+id/otpText_LoginActivity"
+                android:fontFamily="sans-serif-condensed"
+                android:text=""
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/FragmentGreen"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <com.goodiebag.pinview.Pinview
+            android:id="@+id/otpPinView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twenty_dp"
+            app:cursorVisible="true"
+            app:forceKeyboard="true"
+            app:inputType="number"
+            app:password="false"
+            app:pinLength="4"></com.goodiebag.pinview.Pinview>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/timeShower_LoginActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginRight="@dimen/five_dp"
+                android:layout_toLeftOf="@id/reSend_LoginActivity"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="@dimen/five_dp"
+                android:text="Time"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/reSend_LoginActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/five_dp"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="@dimen/five_dp"
+                android:text="RESEND"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/otpError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/otpPinView"
+            android:text="otp"
+            android:visibility="gone" />
+
+        <!--<TextView
+            android:id="@+id/resendOTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESEND OTP?"
+            android:layout_below="@id/otpError"
+            />
+
+     -->
+
+        <Button
+            android:id="@+id/otpSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty_dp"
+            android:layout_below="@id/otpError"
+            android:layout_margin="@dimen/twenty_dp"
+            android:background="@drawable/rec_gradiant"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/submitOTP"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_font"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <!-- <Button
+         android:id="@+id/otpSubmit"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/otpError"
+         android:text="Submit OTP"
+         />
+    -->
+</RelativeLayout>

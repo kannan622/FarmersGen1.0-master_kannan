@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/ten_dp"
+    tools:context=".productdescription.ProductDescriptionActivity">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="550dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/productReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/ten_dp"
+                android:background="@color/FragmentGreen"
+                android:padding="@dimen/three_dp"
+                android:text="Review" />
+
+
+            <ImageView
+                android:id="@+id/poductDescImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/two_hundred_dp"
+                android:src="@drawable/ic_launcher_one" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five_dp">
+
+                <TextView
+                    android:id="@+id/productDescBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Brand Name"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+                    android:textSize="@dimen/twenty_dp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/productDescProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/productDescBrand"
+                    android:layout_marginLeft="@dimen/eight_dp"
+                    android:layout_toRightOf="@id/productDescBrand"
+                    android:text="ProductName"
+                    android:textSize="@dimen/twenty_dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/aboutthisproduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:text="About this product"
+                android:textColor="@color/lightBlue"
+                android:textSize="@dimen/twenty_dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five_dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:gravity="center"
+                        android:text="ProductName" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center"
+                        android:text="ProductQuantity" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center"
+                        android:text="Product Actual Price" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center"
+                        android:text="Product Offer Price" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center"
+                        android:text="Rating" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center"
+                        android:text="Manufacturing Date"
+                        android:textColor="@color/FragmentGreen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center"
+                        android:text="Expairy Date"
+                        android:textColor="@color/FragmentGreen" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/productDesName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:gravity="center"
+                        android:text="Grandmas Oil" />
+
+                    <TextView
+                        android:id="@+id/productDescQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center"
+                        android:text="50grams" />
+
+                    <TextView
+                        android:id="@+id/productDescActualPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center"
+                        android:text="50" />
+
+                    <TextView
+                        android:id="@+id/productDescOfferPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center"
+                        android:text="45" />
+
+                    <TextView
+                        android:id="@+id/productDescRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:background="@color/FragmentGreen"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/four_dp"
+                        android:paddingRight="@dimen/four_dp"
+                        android:text="4.5" />
+
+                    <TextView
+                        android:id="@+id/productDescManuDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center"
+                        android:inputType="date" />
+
+                    <TextView
+                        android:id="@+id/productDescExpairyDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center"
+                        android:inputType="date" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Product And Packaging"
+                    android:textColor="@color/FragmentGreen"
+                    android:textSize="@dimen/eighteen_dp" />
+
+                <ImageView
+                    android:id="@+id/plusInProductDesc"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/plus_produc_desc" />
+
+                <ImageView
+                    android:id="@+id/minusInProductDesc"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/minus_produc_desc"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/productAndPackText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginRight="@dimen/three_dp"
+                android:background="@color/white"
+                android:maxLines="2"
+                android:text="This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is ." />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Ingredients Used"
+                    android:textColor="@color/FragmentGreen"
+                    android:textSize="@dimen/eighteen_dp" />
+
+                <ImageView
+                    android:id="@+id/plusInIngredientsUsed"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/plus_produc_desc" />
+
+                <ImageView
+                    android:id="@+id/minusInIngredientsUsed"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/minus_produc_desc"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/ingredientsUsedText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginRight="@dimen/three_dp"
+                android:background="@color/white"
+                android:maxLines="2"
+                android:text="This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is ." />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Usage and Benefits"
+                    android:textColor="@color/FragmentGreen"
+                    android:textSize="@dimen/eighteen_dp" />
+
+                <ImageView
+                    android:id="@+id/plusBenefits"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/plus_produc_desc" />
+
+                <ImageView
+                    android:id="@+id/minusBenefits"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/minus_produc_desc"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/benefitsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginRight="@dimen/three_dp"
+                android:background="@color/white"
+                android:maxLines="2"
+                android:text="This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is This product is ." />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Manufacturing Video"
+                    android:textColor="@color/FragmentGreen"
+                    android:textSize="@dimen/eighteen_dp" />
+
+                <ImageView
+                    android:id="@+id/plusManufacturing"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/plus_produc_desc"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/minusManufacturing"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/minus_produc_desc"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/followFB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:layout_marginTop="@dimen/three_dp"
+                    android:text="Follow us on Facebook" />
+
+                <TextView
+                    android:id="@+id/fbLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/five_dp"
+                    android:layout_marginTop="@dimen/three_dp"
+                    android:layout_toRightOf="@id/followFB"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/followInsta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:layout_marginTop="@dimen/eight_dp"
+                    android:text="Follow us on Instagram" />
+
+                <TextView
+                    android:id="@+id/instaLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/five_dp"
+                    android:layout_marginTop="@dimen/eight_dp"
+                    android:layout_toRightOf="@id/followInsta"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/followYouTube"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fifteen_dp"
+                    android:layout_marginTop="@dimen/eight_dp"
+                    android:text="Manufacturing Video" />
+
+                <TextView
+                    android:id="@+id/youtubeLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/five_dp"
+                    android:layout_marginTop="@dimen/eight_dp"
+                    android:layout_toRightOf="@id/followYouTube"
+                    android:text="" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five_dp"
+                android:layout_marginTop="@dimen/fifteen_dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rate Me"
+                    android:textColor="@color/FragmentGreen"
+                    android:textSize="@dimen/eighteen_dp" />
+            </RelativeLayout>
+
+
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:numStars="5" />
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

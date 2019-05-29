@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".address.Add_Address_Activity">
+
+    <RelativeLayout
+        android:id="@+id/RLayoutDeliveryAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tVDeliveryAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Delivery Address"
+            android:textColor="@color/app_black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/useMyLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RLayoutDeliveryAddress">
+
+        <Button
+            android:id="@+id/myLocationButtonInaddAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use My Location"
+            android:textColor="@color/FragmentGreen"
+            android:layout_margin="@dimen/ten_dp" />
+        <TextView
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myLocationButtonInaddAddress"
+            android:text="Tab to auto fill the address fields"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginRight="@dimen/ten_dp"
+            android:gravity="center"
+            android:textSize="@dimen/fifteen_dp"
+            />
+        <TextView
+            android:id="@+id/showAddressAdd"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/tab"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginRight="@dimen/ten_dp"
+            android:textStyle="bold"
+            android:text="Here Goes Fetching Map Address"
+            android:layout_marginBottom="@dimen/five_dp"
+            android:visibility="gone"
+            />
+
+
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@+id/useMyLocation"
+        android:paddingLeft="@dimen/fifteen_dp"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:paddingRight="@dimen/fifteen_dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/eight_dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/flatNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/addFlatNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="House /Flat No" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/streetName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty_dp"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/addStreetName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Street Name" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty_dp"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/addArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Area" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty_dp"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/addCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/pinCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty_dp"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/addPincode"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"
+                    android:hint="Pincode" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/landMark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="LandMark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/alternateMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <Button
+        android:id="@+id/proceedToPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/FragmentGreen"
+        android:onClick="onClickProceed"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:text="Save Address"
+        android:textAllCaps="false"
+
+        android:textColor="@color/White"
+        android:textSize="18sp"
+
+        />
+
+</RelativeLayout>
+
+
+    <!--<LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:layout_margin="8dp"
+            android:layout_below="@+id/RLayoutDeliveryAddress"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/flatNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flat/Apt No:"
+                android:textColor="#4a8cf6"
+                android:textSize="20sp"
+                />
+            <EditText
+                android:id="@+id/eFno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 />
+
+            <TextView
+                android:id="@+id/tvStreetName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Steet Name"
+                android:textColor="#4a8cf6"
+                android:textSize="20sp"
+
+                />
+            <EditText
+                android:id="@+id/EStreetName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Area/Locality"
+                android:textColor="#4a8cf6"
+                android:textSize="20sp"
+
+                />
+            <EditText
+                android:id="@+id/eArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textColor="#4a8cf6"
+                android:textSize="20sp"
+
+                />
+            <EditText
+                android:id="@+id/eCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvPinCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#4a8cf6"
+                android:text="PinCode"
+
+                />
+            <EditText
+                android:id="@+id/ePincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    -->
+
+

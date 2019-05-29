@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup_Parrent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical"
+    tools:context=".signup.SignupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/hundred_dp"
+            android:layout_height="@dimen/hundred_dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_logo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/fifteen_dp"
+        android:orientation="vertical">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/signUpMobileNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_mobile"
+                android:hint="@string/mobile_number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingTop="@dimen/ten_dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/large_font" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/signUpName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/three_dp"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_person_black_24dp"
+                android:hint="@string/signupname"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/large_font" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/signUpEmail"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/three_dp"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextEM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_email_black_24dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:paddingTop="@dimen/ten_dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/large_font" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/signUpPassword"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/three_dp"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorAccent">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextpas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingTop="@dimen/ten_dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/large_font" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:text="@string/terms"
+            android:textColor="@color/lightBlue" />
+
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:background="@drawable/rec_gradiant"
+            android:onClick="onClickSignUp"
+            android:text="@string/signuptext"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_font" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten_dp">
+
+            <TextView
+                android:id="@+id/acc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/already" />
+
+            <TextView
+                android:id="@+id/arrowbackid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/acc"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_toRightOf="@id/acc"
+                android:onClick="arrowbackToLogin"
+                android:text="@string/signin"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

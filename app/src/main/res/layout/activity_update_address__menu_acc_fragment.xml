@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".address.UpdateAddress_MenuAccFragment">
+
+    <RelativeLayout
+        android:id="@+id/RLayoutDeliveryAddressAtMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/updateDeliveryDeliveryAddressAtMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="8dp"
+            android:text="Delivery Address"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+            android:textColor="#4a8cf6"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/useMyLocationInMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RLayoutDeliveryAddressAtMenu">
+
+        <Button
+            android:id="@+id/myLocationButtonInMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:text="Use My Location"
+            android:textColor="@color/FragmentGreen" />
+        <TextView
+            android:id="@+id/tabToMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myLocationButtonInMenu"
+            android:text="Tab to auto fill the address fields"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginRight="@dimen/ten_dp"
+            android:gravity="center"
+            android:textSize="@dimen/fifteen_dp"
+            />
+        <TextView
+            android:id="@+id/showAddressMenu"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/tabToMap"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginRight="@dimen/ten_dp"
+            android:textStyle="bold"
+            android:text="Here Goes Fetching Map Address"
+            android:layout_marginBottom="@dimen/five_dp"
+            android:visibility="gone"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@id/useMyLocationInMenu"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="25px">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RLayoutDeliveryAddressAtMenu"
+        android:layout_margin="8dp"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/updateFlatNoMenuCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/flatNoMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="House /Flat No" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/updateStreetNameMenuCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/streetNameMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Street Name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/updateAreaMenuCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/areaMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Area" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+
+        <!--<android.support.design.widget.TextInputLayout
+            android:id="@+id/landMarkMenuCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="LandMark" />
+        </android.support.design.widget.TextInputLayout>
+-->
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/updateCityMenuCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/cityMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/upatePinCodeMenuCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:inputType="number"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/pinCodeMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pincode" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/landMarkMenuCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="LandMark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/alternateMobileMenuCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alternate Mobile Number" />
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/proceedToPay"
+        android:layout_width="match_parent"
+        android:background="@color/FragmentGreen"
+        android:textColor="@color/White"
+        android:textSize="25sp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:onClick="onClickUpdateAddressAtMenuCart"
+        android:text="Update Address"
+        />
+
+
+</RelativeLayout>
